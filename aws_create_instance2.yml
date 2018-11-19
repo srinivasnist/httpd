@@ -10,8 +10,6 @@
           name: AWS_Security_Group
           description: Security Group for webserver Servers
           region: us-east-2
-          aws_access_key: AKIAIQIR4CNXIHIDAT6A
-          aws_secret_key: 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
           rules:
             - proto: tcp
               from_port: 22
@@ -29,8 +27,6 @@
       - name: Create an EC2 instance
         ec2:
           key_name: id_rsa
-          aws_access_key: AKIAIQIR4CNXIHIDAT6A
-          aws_secret_key: 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
           region: us-east-2
           group_id: "{{ firewall.group_id }}"
           instance_type: t2.micro
