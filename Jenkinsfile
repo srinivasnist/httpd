@@ -1,5 +1,4 @@
     node{ 
-          stages {
               stage('SCM') {
                   steps {
                         git 'https://github.com/srinivasnist/httpd.git'
@@ -11,4 +10,4 @@
             }
         }
     }
-}
+
